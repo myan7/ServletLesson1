@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>ServletLab1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  <!-- 每写一个servlet 都要配置一遍这个文件, 名字不能一样 -->
+  <!-- JSPC servlet Mapping starts -->
+  <servlet>
+  	<servlet-name>servletimpl</servlet-name>  <!-- 这就是给你的servlet 起一个名字, 任何名字都可以, 你能记住就行 -->
+  	<servlet-class>my.servlets.Lesson1_ServletImpl</servlet-class> <!-- 指明你要用的servlet 在哪里(包名+类名), 我们这里用的是自己定义的一个 -->
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>servletimpl</servlet-name>  <!-- 你要mapping request 去哪个servelt? 当然是刚刚我们定义过的那个, 所以,用上面的名字 -->
+  	<url-pattern>/lessons/lesson1/servletimpl</url-pattern> <!-- 在浏览器中输入的访问该servlet 的url, 任意的,你能记住就行 -->
+  </servlet-mapping>
+   <!-- JSPC servlet Mapping ends -->
+   
+  <!-- 每写一个servlet 都要配置一遍这个文件, 名字不能一样 -->
+  <!-- JSPC servlet Mapping starts -->
+  <servlet>
+  	<servlet-name>genericservletext</servlet-name>  <!-- 这就是给你的servlet 起一个名字, 任何名字都可以, 你能记住就行 -->
+  	<servlet-class>my.servlets.Lesson1_GenericServletExt</servlet-class> <!-- 指明你要用的servlet 在哪里(包名+类名), 我们这里用的是自己定义的一个 -->
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>genericservletext</servlet-name>  <!-- 你要mapping request 去哪个servelt? 当然是刚刚我们定义过的那个, 所以,用上面的名字 -->
+  	<url-pattern>/lessons/lesson1/genericservletext</url-pattern> <!-- 在浏览器中输入的访问该servlet 的url, 任意的,你能记住就行 -->
+  </servlet-mapping>
+   <!-- JSPC servlet Mapping ends -->
+  
+  <!-- 每写一个servlet 都要配置一遍这个文件, 名字不能一样 -->
+  <!-- JSPC servlet Mapping starts -->
+  <servlet>
+  	<servlet-name>httpservletext</servlet-name>  <!-- 这就是给你的servlet 起一个名字, 任何名字都可以, 你能记住就行 -->
+  	<servlet-class>my.servlets.Lesson1_HttpServletExt</servlet-class> <!-- 指明你要用的servlet 在哪里(包名+类名), 我们这里用的是自己定义的一个 -->
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>httpservletext</servlet-name>  <!-- 你要mapping request 去哪个servelt? 当然是刚刚我们定义过的那个, 所以,用上面的名字 -->
+  	<url-pattern>/lessons/lesson1/httpservletext</url-pattern> <!-- 在浏览器中输入的访问该servlet 的url, 任意的,你能记住就行 -->
+  </servlet-mapping>
+   <!-- JSPC servlet Mapping ends -->
+</web-app>
